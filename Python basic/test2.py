@@ -134,3 +134,19 @@ def to_fahrenheit(temp):
 
 fahrenheit = list(map(to_fahrenheit , celcius))
 print(fahrenheit)
+
+
+pizza = {
+    'name': 'Margherita',
+    'Price': 8.99,
+    'calories': 250,
+    'Toppings': ['cheese', 'tomato sauce', 'basil']
+}
+
+print(pizza['name'])
+
+print(pizza.items())
+
+pizza.update({'Price': 10.99})
+
+print(pizza)
