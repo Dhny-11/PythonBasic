@@ -36,3 +36,8 @@ print(pizza['toppings'])
 #mengganti valuse dari key 'toppings' dengan list baru
 pizza['toppings'] = ['ketchup' , 'mustard' , 'mayonnaise']
 print(pizza['toppings'])
+
+print(pizza)
+
+for product in pizza.items() :
+    print(product)

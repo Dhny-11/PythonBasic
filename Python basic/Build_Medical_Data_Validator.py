@@ -27,7 +27,7 @@ medical_records = [
     },
     {
         'patient_id': 'p1004',
-        'age': 56,
+        'age': 20,
         'gender': 'Male',
         'diagnosis': 'Chronic Back Pain',
         'medications': ['Ibuprofen', 'Physical Therapy'],
@@ -35,9 +35,7 @@ medical_records = [
     }
 ]
 
-def find_invalid_records(
-    patient_id, age, gender, diagnosis, medications, last_visit_id
-):
+def find_invalid_records(patient_id, age, gender, diagnosis, medications, last_visit_id):
     constraints = {
         'patient_id': isinstance(patient_id, str) and re.fullmatch(r'p\d+', patient_id, re.IGNORECASE),
         'age': isinstance(age, int) and age >= 18,
@@ -66,7 +64,7 @@ def validate(data):
             print(f'Invalid format: expected a dictionary at position {index}.')
             is_invalid = True
             continue
-
+            
         if set(dictionary.keys()) != key_set:
             print(
                 f'Invalid format: {dictionary} at position {index} has missing and/or invalid keys.'
